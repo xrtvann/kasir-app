@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kasir app</title>
+
+    <link
+      rel="stylesheet"
+      href="assets/vendors/bootstrap-5.3.3/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/vendors/boxicons-2.1.4/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-soft-blue">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white py-3">
+      <div class="container-fluid">
+        <a href="index.html" class="navbar-brand logo">
+          <img src="assets/images/logo.png" alt="navbar-logo" /> Kasir App
+        </a>
+        <button
+          class="navbar-toggler border-0 shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+        >
+          <span class="navbarMenu"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav me-auto gap-2">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active px-4">Kasir</a>
+            </li>
+            <li class="nav-item">
+              <a href="order-list.html" class="nav-link px-4">Order List </a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+              >
+                Muhammad Irvan
+              </a>
+
+              <ul class="dropdown-menu dropdown-menu-end mt-2">
+                <li>
+                  <a href="dashboard.html" class="dropdown-item">Admin</a>
+                </li>
+                <li>
+                  <a href="setting.html" class="dropdown-item">Setting</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a href="login.html" class="dropdown-item">Log Out</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <script src="assets/vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

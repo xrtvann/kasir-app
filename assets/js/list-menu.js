@@ -96,7 +96,3 @@ function showMenus() {
 }
 
 showMenus();
-
-function addToCart(menu) {
-  console.log(`Menu ${menu.name} ditambahkan ke cart!`);
-}

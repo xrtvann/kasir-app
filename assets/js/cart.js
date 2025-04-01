@@ -1,4 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
+const taxAmount = 2500;
 
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
@@ -15,6 +16,26 @@ function addToCart(menu) {
 
   saveCart();
   renderCart();
+}
+
+function updateCartSummary() {
+  const subtotal = cart.reduce(
+    (sum, item) => sum + (item.price * item.quantity),
+    0
+  );
+  const total = subtotal + taxAmount;
+
+  document.getElementById(
+    "subtotal-amount"
+  ).textContent = `Rp. ${subtotal.toLocaleString()}`;
+
+  document.getElementById(
+    "tax-amount"
+  ).textContent = `Rp. ${taxAmount.toLocaleString()}`;
+
+  document.getElementById(
+    "total-amount"
+  ).textContent = `Rp. ${total.toLocaleString()}`;
 }
 
 function renderCart() {
@@ -80,6 +101,8 @@ function renderCart() {
       removeFromCart(this.dataset.id);
     });
   });
+
+  updateCartSummary();
 }
 
 function increaseQuantity(id) {

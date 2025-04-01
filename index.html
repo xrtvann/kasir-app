@@ -104,24 +104,24 @@
 
           <div class="card border-0">
             <div class="card-body px-4">
-              <h4 class="fw-semibold mb-3">Order #001</h4>
+              <h4 class="fw-semibold mb-3 mt-3">Order #001</h4>
               <div id="cart-container" class=""></div>
 
               <!-- Total  -->
               <hr class="my-4" />
               <div class="flex-centerbetween mb-2">
                 <p class="mb-0 text-secondary">Subtotal</p>
-                <p class="mb-0 fw-bold">Rp. 72,000</p>
+                <p id="subtotal-amount" class="mb-0 fw-bold">Rp. 0</p>
               </div>
               <div class="flex-centerbetween mb-5">
                 <p class="mb-0 text-secondary">Pajak</p>
-                <p class="mb-0 fw-bold">Rp. 12,000</p>
+                <p id="tax-amount" class="mb-0 fw-bold">Rp. 2500</p>
               </div>
 
               <hr class="my-4" style="border-style: dashed" />
               <div class="flex-centerbetween mb-5">
                 <p class="mb-0 text-secondary">Total</p>
-                <p class="mb-0 fw-bold">Rp. 84,000</p>
+                <p id="total-amount" class="mb-0 fw-bold">Rp. 84,000</p>
               </div>
 
               <button
@@ -139,10 +139,10 @@
     </section>
 
     <!-- Checkout Modal -->
-    <div class="modal fade" id="checkoutmodal">
-      <div class="modal-dialog">
+    <div class="modal fade" id="checkoutmodal" data-bs-backdrop="static">
+      <div class="modal-dialog modal-lg">
         <div class="modal-content">
-          <div class="modal-header border-0">
+          <div class="modal-header border-1">
             <h5 class="modal-title">Checkout</h5>
             <button
               class="btn-close"
@@ -151,31 +151,100 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="input-group mb-3">
+            <div class="input-group mb-3 mt-3">
               <span class="input-group-text" id="customer_name">
                 <i class="bx bx-user"></i>
               </span>
               <input
                 type="text"
-                value="Muhammad Irvan"
                 name="customer_name"
                 id="name"
                 class="form-control"
+                placeholder="Nama Pelanggan"
                 required
               />
             </div>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="pay"> Rp. </span>
-              <input
-                type="text"
-                value="84,000"
-                name="pay_input"
-                id="pay_input"
-                oninput="formatNumber(this)"
-                class="form-control"
-                required
-              />
+
+            <hr class="mb-4" style="border-style: dashed" />
+
+            <div class="row">
+              <div class="col-6">
+                <div class="input-group mb-3 mt-2">
+                  <span class="input-group-text" id="total-payment"> Rp. </span>
+                  <input
+                    type="text"
+                    name="total-payment"
+                    id="total-payment"
+                    class="form-control"
+                    placeholder="Total Pembelian"
+                    readonly
+                  />
+                </div>
+                <div class="input-group mb-3 mt-2">
+                  <span class="input-group-text" id="payment-amount">
+                    Rp.
+                  </span>
+                  <input
+                    type="text"
+                    name="payment-amount"
+                    id="payment-amount"
+                    class="form-control"
+                    placeholder="Jumlah Bayar"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="col-6">
+                <div class="input-group mb-3 mt-2">
+                  <span class="input-group-text"
+                    ><i class="bx bx-wallet"></i
+                  ></span>
+                  <select
+                    name="payment-method"
+                    class="form-select"
+                    id="payment-method"
+                  >
+                    <option selected>Pilih Metode Pembayaran</option>
+                    <option value="transfer">Transfer</option>
+                    <option value="qris">QRIS</option>
+                    <option value="cash">Cash</option>
+                  </select>
+                </div>
+              </div>
             </div>
+
+            <hr class="" style="border-style: dashed" />
+
+            <div class="row">
+              <div class="col">
+                <div class="card border-0">
+                  <div class="card-body px-0">
+       
+
+                    <!-- Total  -->
+                  
+                    <div class="flex-centerbetween mb-2">
+                      <p class="mb-0 text-secondary">Total Pembelian</p>
+                      <p id="total-amount" class="mb-0 fw-bold">Rp. 0</p>
+                    </div>
+                    <div class="flex-centerbetween mb-5">
+                      <p class="mb-0 text-secondary">Jumlah Bayar</p>
+                      <p id="payment-amount" class="mb-0 fw-bold">Rp. 0</p>
+                    </div>
+
+                    <hr class="my-4" style="border-style: dashed" />
+                    <div class="flex-centerbetween mb-5">
+                      <p class="mb-0 text-secondary">Kembalian</p>
+                      <p id="change-amount" class="mb-0 fw-bold">Rp. 0</p>
+                    </div>
+
+                  
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <input type="hidden" id="nominal" name="pay" value="84000" />
             <button class="btn btn-primary w-100" type="submit">Process</button>
           </div>
@@ -186,21 +255,6 @@
     <script src="assets/js/menu-categories.js"></script>
     <script src="assets/js/list-menu.js"></script>
     <script src="assets/js/cart.js"></script>
-    <script>
-      function formatNumber(input) {
-        // Menghapus karakter non digit
-        let cleanedValue = input.value.replace(/\D/g, "");
-
-        // Memisahkan nilai menjadi bagian ribuan menggunakan regular expression
-        cleanedValue = cleanedValue.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-        // Memperbarui nilai input dengan format yang di inginkan
-        input.value = cleanedValue;
-        document.getElementById("nominal").value = cleanedValue.replace(
-          /,/g,
-          ""
-        );
-      }
-    </script>
+    <script src="assets/js/checkout-modal.js"></script>
   </body>
 </html>

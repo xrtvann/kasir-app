@@ -27,15 +27,15 @@ function updateCartSummary() {
 
   document.getElementById(
     "subtotal-amount"
-  ).textContent = `Rp. ${subtotal.toLocaleString()}`;
+  ).textContent = `Rp ${subtotal.toLocaleString('id-ID')}`;
 
   document.getElementById(
     "tax-amount"
-  ).textContent = `Rp. ${taxAmount.toLocaleString()}`;
+  ).textContent = `Rp ${taxAmount.toLocaleString('id-ID')}`;
 
   document.getElementById(
     "total-amount"
-  ).textContent = `Rp. ${total.toLocaleString()}`;
+  ).textContent = `Rp ${total.toLocaleString('id-ID')}`;
 }
 
 function renderCart() {
@@ -52,7 +52,7 @@ function renderCart() {
     </div>
     <div class="col-9 col-lg-4">
       <p class="mb-0 fw-semibold">${item.name}</p>
-      <p class="mb-0 fw-semibold text-secondary">Rp. ${item.price.toLocaleString()}</p>
+      <p class="mb-0 fw-semibold text-secondary">Rp ${item.price.toLocaleString('id-ID')}</p>
     </div>
     <div class="col-4 col-lg-2">
       <div class="d-flex align-items-center gap-2">
@@ -70,9 +70,9 @@ function renderCart() {
       </div>
     </div>
     <div class="col-6 col-lg-3">
-      <p class="mb-0 text-dark fw-bold text-end">Rp. ${(
+      <p class="mb-0 text-dark fw-bold text-end">Rp ${(
         item.price * item.quantity
-      ).toLocaleString()}</p>
+      ).toLocaleString('id-ID')}</p>
     </div>
     <div class="col-2 col-lg-1">
       <button class="btn btn-sm btn-light btn-delete" data-id="${item.id}">

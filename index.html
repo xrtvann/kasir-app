@@ -111,17 +111,17 @@
               <hr class="my-4" />
               <div class="flex-centerbetween mb-2">
                 <p class="mb-0 text-secondary">Subtotal</p>
-                <p id="subtotal-amount" class="mb-0 fw-bold">Rp. 0</p>
+                <p id="subtotal-amount" class="mb-0 fw-bold"></p>
               </div>
               <div class="flex-centerbetween mb-5">
                 <p class="mb-0 text-secondary">Pajak</p>
-                <p id="tax-amount" class="mb-0 fw-bold">Rp. 2500</p>
+                <p id="tax-amount" class="mb-0 fw-bold"></p>
               </div>
 
               <hr class="my-4" style="border-style: dashed" />
               <div class="flex-centerbetween mb-5">
                 <p class="mb-0 text-secondary">Total</p>
-                <p id="total-amount" class="mb-0 fw-bold">Rp. 84,000</p>
+                <p id="total-amount" class="mb-0 fw-bold"></p>
               </div>
 
               <button
@@ -170,7 +170,7 @@
             <div class="row">
               <div class="col-6">
                 <div class="input-group mb-3 mt-2">
-                  <span class="input-group-text" id="total-payment"> Rp. </span>
+                  <span class="input-group-text">Rp</span>
                   <input
                     type="text"
                     name="total-payment"
@@ -182,7 +182,7 @@
                 </div>
                 <div class="input-group mb-3 mt-2">
                   <span class="input-group-text" id="payment-amount">
-                    Rp.
+                    Rp
                   </span>
                   <input
                     type="text"
@@ -190,9 +190,15 @@
                     id="payment-amount"
                     class="form-control"
                     placeholder="Jumlah Bayar"
+                    oninput="formatNumber(this)"
                     required
                   />
                 </div>
+                <input
+                  type="hidden"
+                  id="payment-amount-hidden"
+                  name="payment_amount"
+                />
               </div>
 
               <div class="col-6">
@@ -204,6 +210,7 @@
                     name="payment-method"
                     class="form-select"
                     id="payment-method"
+                    required
                   >
                     <option selected>Pilih Metode Pembayaran</option>
                     <option value="transfer">Transfer</option>
@@ -220,32 +227,28 @@
               <div class="col">
                 <div class="card border-0">
                   <div class="card-body px-0">
-       
-
                     <!-- Total  -->
-                  
+
                     <div class="flex-centerbetween mb-2">
                       <p class="mb-0 text-secondary">Total Pembelian</p>
-                      <p id="total-amount" class="mb-0 fw-bold">Rp. 0</p>
+                      <p id="total-amount-text" class="mb-0 fw-bold"></p>
                     </div>
                     <div class="flex-centerbetween mb-5">
                       <p class="mb-0 text-secondary">Jumlah Bayar</p>
-                      <p id="payment-amount" class="mb-0 fw-bold">Rp. 0</p>
+                      <p id="payment-amount-text" class="mb-0 fw-bold">Rp </p>
                     </div>
 
                     <hr class="my-4" style="border-style: dashed" />
                     <div class="flex-centerbetween mb-5">
                       <p class="mb-0 text-secondary">Kembalian</p>
-                      <p id="change-amount" class="mb-0 fw-bold">Rp. 0</p>
+                      <p id="change-amount-text" class="mb-0 fw-bold"></p>
                     </div>
-
-                  
                   </div>
                 </div>
               </div>
             </div>
 
-            <input type="hidden" id="nominal" name="pay" value="84000" />
+            <input type="hidden" id="nominal-payment" name="pay" />
             <button class="btn btn-primary w-100" type="submit">Process</button>
           </div>
         </div>

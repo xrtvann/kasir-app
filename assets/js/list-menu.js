@@ -83,7 +83,7 @@ function showMenus() {
                     <h4 class="card-title mt-4 mb-2">${menu.name}</h4>
                     <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-1">
                         <p class="mb-0 text-secondary fs-7">${menu.category}</p>
-                        <p class="mb-0 text-primary fw-semibold">Rp. ${menu.price.toLocaleString()}</p>
+                        <p class="mb-0 text-primary fw-semibold">Rp ${menu.price.toLocaleString('id-ID')}</p>
                     </div>
                 </div>
             </div>

@@ -100,6 +100,124 @@
         </div>
     </section>
 
+
+    <!-- Detail Order Modal -->
+    <div class="modal fade" id="detail-order-modal">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header border-1">
+            <h5 class="modal-title">Detail Order </h5>
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="customer-information mx-3 mb-4">
+              <h6 class="mb-5 mt-2 fw-bold text-muted fs-5">Informasi Pembeli</h6>
+
+            <div class="row mb-2">
+              <div class="col-5 fw-semibold">Nama Pembeli</div>
+              <div class="col-1 text-end">:</div>
+              <div class="col-6 fw-semibold">Muhammad Irvan</div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-5 fw-semibold">Status Pesanan</div>
+              <div class="col-1 text-end">:</div>
+              <div class="col-6 text-secondary fw-bold">Pending</div>
+            </div>
+
+            <hr class="mt-4" style="border-style: dashed;">
+            </div>
+            <div class="order-item mx-3 mb-4">
+              <h6 class="mb-5 mt-4 fw-bold text-muted fs-5">Menu Item</h6>
+
+              <div class="row mb-2 align-items-center">
+                <div class="col-3 col-lg-2">
+                  <img src="../assets/images/burger.jpg" alt="burger" class="rounded-2 w-75"/>
+                </div>
+                <div class="col-9 col-lg-4">
+                  <p class="mb-0 fw-semibold">Cheese Burger</p>
+                  <p class="mb-0 fw-semibold text-secondary">Rp 24.000</p>
+                </div>
+                <div class="col-4 col-lg-2">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="fw-semibold">Jumlah</div>
+                    <div class="text-end">:</div>
+                    <div class="fw-semibold">2</div>
+                    
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <p class="mb-0 text-dark fw-bold text-end">Rp 48.000</p>
+                </div>
+                
+            
+              </div>
+
+              <div class="row mb-2 align-items-center">
+                <div class="col-3 col-lg-2">
+                  <img src="../assets/images/iced-caramel.png" alt="iced-caramel" class="rounded-2 w-75"/>
+                </div>
+                <div class="col-9 col-lg-4">
+                  <p class="mb-0 fw-semibold">Iced Caramel</p>
+                  <p class="mb-0 fw-semibold text-secondary">Rp 12.000</p>
+                </div>
+                <div class="col-4 col-lg-2">
+                  <div class="d-flex align-items-center gap-2">
+                    <div class="fw-semibold">Jumlah</div>
+                    <div class="text-end">:</div>
+                    <div class="fw-semibold">2</div>
+                    
+                  </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                  <p class="mb-0 text-dark fw-bold text-end">Rp 24.000</p>
+                </div>
+                
+            
+              </div>
+
+              <hr class="mt-4" style="border-style: dashed;">
+          </div>
+          <div class="payment-information mx-3 mb-4">
+            <h6 class="mb-5 mt-2 fw-bold text-muted fs-5">Informasi Pembayaran</h6>
+
+          <div class="row mb-2">
+            <div class="col-5 fw-semibold">Subtotal Pesanan</div>
+            <div class="col-1 text-end">:</div>
+            <div class="col-6 fw-bold">Rp 72.000</div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-5 fw-semibold">Pajak</div>
+            <div class="col-1 text-end">:</div>
+            <div class="col-6 fw-bold">Rp 2.500</div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-5 fw-semibold">Total Pesanan</div>
+            <div class="col-1 text-end">:</div>
+            <div class="col-6 fw-bold">Rp 74.500</div>
+          </div>
+
+          <div class="row mb-2 mt-5">
+            <div class="col-5 fw-semibold">Jumlah Bayar</div>
+            <div class="col-1 text-end">:</div>
+            <div class="col-6 fw-bold">Rp 100.000</div>
+          </div>
+
+          <div class="row mb-2">
+            <div class="col-5 fw-semibold">Kembali</div>
+            <div class="col-1 text-end">:</div>
+            <div class="col-6 fw-bold">Rp 25.500</div>
+          </div>
+
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="../assets/vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/order-list/show-order-list.js"></script>
     <script src="../assets/js/order-list/filter-order-status.js"></script>

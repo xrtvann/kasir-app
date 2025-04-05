@@ -63,7 +63,8 @@ function showOrderList() {
               <div class="row g-0">
                 <div class="col-lg-12">
                   <div class="card-body">
-                    <a href="detail-order.html" class="detail-order">
+                    <a href="#" class="detail-order" data-bs-toggle="modal"
+                data-bs-target="#detail-order-modal">
                     <h4 class="fw-semibold mt-2 mb-3">${order.id}</h4>
                     <div class="card-subtitle">
                       <p class="">${order.customer_name}</p>

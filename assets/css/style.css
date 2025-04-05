@@ -180,3 +180,9 @@ a {
 .password-toggle:hover {
     color: #333;
 }
+
+/* Order list */
+.detail-order {
+  text-decoration: none;
+  color: #333;
+}

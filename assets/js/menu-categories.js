@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
       menuItems.forEach((item) => {
         const category = item.dataset.category;
 
+        
+        
+
         if (filter === "all" || category === filter) {
           item.style.display = "flex";
         } else {

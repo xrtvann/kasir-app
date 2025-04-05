@@ -73,30 +73,35 @@
     </nav>
 
     <section class="container-fluid p-5">
-        <div class="row g-4">
+        <div class="row g-0 h-100">
             <div class="col-lg-12">
                 <h2 class="text-dark fw-bold mb-4">Order List</h2>
                 <ul
             class="nav nav-pills gap-1 pb-3 mb-4 border-bottom"
-            id="categoryTabs"
+            id="orderStatusTabs"
           >
             <li class="nav-item">
               <a href="#" class="nav-link active" data-filter="all">Semua</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" data-filter="makanan">Pending</a>
+              <a href="#" class="nav-link" data-filter="pending">Pending</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" data-filter="minuman">Selesai</a>
+              <a href="#" class="nav-link" data-filter="selesai">Selesai</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link" data-filter="snack">Cancel</a>
+              <a href="#" class="nav-link" data-filter="cancel">Cancel</a>
             </li>
           </ul>
             </div>
         </div>
+        <div class="row d-flex gap-0" id="order-list-container">
+          </div>
+        </div>
     </section>
 
     <script src="../assets/vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/order-list/show-order-list.js"></script>
+    <script src="../assets/js/order-list/filter-order-status.js"></script>
   </body>
 </html>

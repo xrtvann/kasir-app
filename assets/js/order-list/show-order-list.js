@@ -48,7 +48,7 @@ function showOrderList() {
 
   orderLists.forEach((order) => {
     const orderDiv = document.createElement("div");
-    orderDiv.classList.add("col-lg-3", "order-list");
+    orderDiv.classList.add("col-lg-3", "order-list", "col-xs-12");
     orderDiv.setAttribute("data-order-list", order.status);
 
     let orderStatus = "text-secondary";
@@ -59,7 +59,7 @@ function showOrderList() {
     }
 
     orderDiv.innerHTML = `
-       <div class="card mb-4 pe-0 border-0">
+       <div class="card mb-4 p-2 border-0">
               <div class="row g-0">
                 <div class="col-lg-12">
                   <div class="card-body">

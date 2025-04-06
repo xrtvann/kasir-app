@@ -75,15 +75,17 @@ function showMenus() {
     menuDiv.setAttribute("data-category", menu.category);
 
     menuDiv.innerHTML = `
-        <div class="card cursor-pointer">
-                <div class="card-body p-4">
+        <div class="card menu-card cursor-pointer h-100">
+                <div class="card-body p-4 d-flex flex-column">
                     <img src="${menu.image}" alt="${
       menu.name
     }" class="w-75 d-block mx-auto"/>
-                    <h4 class="card-title mt-4 mb-2">${menu.name}</h4>
-                    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-1">
-                        <p class="mb-0 text-secondary fs-7">${menu.category}</p>
-                        <p class="mb-0 text-primary fw-semibold">Rp ${menu.price.toLocaleString('id-ID')}</p>
+                    <h4 class="menu-name card-title mt-3 mb-2 h-100">${menu.name}</h4>
+                    <div class="menu-info d-flex justify-content-between w-100 gap-1">
+                        <p class="menu-category mb-0 text-secondary fs-7">${menu.category}</p>
+                        <p class="menu-price mb-0 text-primary fw-semibold">Rp ${menu.price.toLocaleString(
+                          "id-ID"
+                        )}</p>
                     </div>
                 </div>
             </div>

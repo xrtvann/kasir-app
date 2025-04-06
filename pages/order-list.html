@@ -1,121 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Order List</title>
 
-    <link
-      rel="stylesheet"
-      href="../assets/vendors/bootstrap-5.3.3/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="../assets/vendors/boxicons-2.1.4/css/boxicons.min.css"
-    />
-    <link rel="stylesheet" href="../assets/css/style.css" />
-  </head>
-  <body class="bg-soft-blue">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white py-3">
-      <div class="container-fluid">
-        <a href="../index.html" class="navbar-brand logo">
-          <img src="../assets/images/logo.png" alt="navbar-logo" /> Kasir App
-        </a>
-        <button
-          class="navbar-toggler border-0 shadow-none"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarMenu"
-        >
-          <span class="navbarMenu"></span>
-        </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order List</title>
 
-        <div class="collapse navbar-collapse" id="navbarMenu">
-          <ul class="navbar-nav me-auto gap-2">
-            <li class="nav-item">
-              <a href="../index.html" class="nav-link  px-4">Kasir</a>
-            </li>
-            <li class="nav-item">
-              <a href="order-list.html" class="nav-link active px-4">Order List </a>
-            </li>
-          </ul>
+  <link rel="stylesheet" href="../assets/vendors/bootstrap-5.3.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/vendors/boxicons-2.1.4/css/boxicons.min.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
 
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                role="button"
-                data-bs-toggle="dropdown"
-              >
-                Muhammad Irvan
-              </a>
+<body class="bg-soft-blue">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white py-3">
+    <div class="container-fluid">
+      <a href="../index.html" class="navbar-brand logo">
+        <img src="../assets/images/logo.png" alt="navbar-logo" /> Kasir App
+      </a>
+    <button class="navbar-toggler border-0 shadow-none bg-secondary" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu">
+        <i id="menuIcon" class="bx bx-menu text-white fs-3"></i>
+      </button>
 
-              <ul class="dropdown-menu dropdown-menu-end mt-2">
-                <li>
-                  <a href="dashboard.html" class="dropdown-item">Admin</a>
-                </li>
-                <li>
-                  <a href="setting.html" class="dropdown-item">Setting</a>
-                </li>
-                <li>
-                  <hr class="dropdown-divider" />
-                </li>
-                <li>
-                  <a href="login.html" class="dropdown-item">Log Out</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav me-auto gap-2">
+          <li class="nav-item">
+            <a href="../index.html" class="nav-link  px-4">Kasir</a>
+          </li>
+          <li class="nav-item">
+            <a href="order-list.html" class="nav-link active px-4">Order List </a>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">
+              Muhammad Irvan
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end mt-2">
+              <li>
+                <a href="dashboard.html" class="dropdown-item">Admin</a>
+              </li>
+              <li>
+                <a href="setting.html" class="dropdown-item">Setting</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a href="login.html" class="dropdown-item">Log Out</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <section class="container-fluid p-5">
-        <div class="row g-0 h-100">
-            <div class="col-lg-12">
-                <h2 class="text-dark fw-bold mb-4">Order List</h2>
-                <ul
-            class="nav nav-pills gap-1 pb-3 mb-4 border-bottom"
-            id="orderStatusTabs"
-          >
-            <li class="nav-item">
-              <a href="#" class="nav-link active" data-filter="all">Semua</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" data-filter="pending">Pending</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" data-filter="selesai">Selesai</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link" data-filter="cancel">Cancel</a>
-            </li>
-          </ul>
-            </div>
+  <section class="container-fluid p-5">
+    <div class="row g-0 h-100">
+      <div class="col-lg-12">
+        <h2 class="text-dark fw-bold mb-4">Order List</h2>
+        <ul class="nav nav-pills gap-1 pb-3 mb-4 border-bottom" id="orderStatusTabs">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" data-filter="all">Semua</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-filter="pending">Pending</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-filter="selesai">Selesai</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-filter="cancel">Cancel</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row d-flex gap-0" id="order-list-container">
+    </div>
+    </div>
+  </section>
+
+
+  <!-- Detail Order Modal -->
+  <div class="modal fade" id="detail-order-modal">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header border-1">
+          <h5 class="modal-title">Detail Order </h5>
+          <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
         </div>
-        <div class="row d-flex gap-0" id="order-list-container">
-          </div>
-        </div>
-    </section>
-
-
-    <!-- Detail Order Modal -->
-    <div class="modal fade" id="detail-order-modal">
-      <div class="modal-dialog modal-lg modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header border-1">
-            <h5 class="modal-title">Detail Order </h5>
-            <button
-              class="btn-close"
-              type="button"
-              data-bs-dismiss="modal"
-            ></button>
-          </div>
-          <div class="modal-body">
-            <div class="customer-information mx-3 mb-4">
-              <h6 class="mb-5 mt-2 fw-bold text-muted fs-5">Informasi Pembeli</h6>
+        <div class="modal-body">
+          <div class="customer-information mx-3 mb-4">
+            <h6 class="mb-5 mt-2 fw-bold text-muted fs-5">Informasi Pembeli</h6>
 
             <div class="row mb-2">
               <div class="col-5 fw-semibold">Nama Pembeli</div>
@@ -129,90 +109,90 @@
             </div>
 
             <hr class="mt-4" style="border-style: dashed;">
+          </div>
+          <div class="order-item mx-3 mb-4">
+            <h6 class="mb-5 mt-4 fw-bold text-muted fs-5">Menu Item</h6>
+
+            <div class="row mb-2 align-items-center">
+              <div class="col-3 col-lg-2">
+                <img src="../assets/images/burger.jpg" alt="burger" class="rounded-2 w-75" />
+              </div>
+              <div class="col-9 col-lg-4">
+                <p class="mb-0 fw-semibold">Cheese Burger</p>
+                <p class="mb-0 fw-semibold text-secondary">Rp 24.000</p>
+              </div>
+              <div class="col-4 col-lg-2">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="fw-semibold">Jumlah</div>
+                  <div class="text-end">:</div>
+                  <div class="fw-semibold">2</div>
+
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <p class="mb-0 text-dark fw-bold text-end">Rp 48.000</p>
+              </div>
+
+
             </div>
-            <div class="order-item mx-3 mb-4">
-              <h6 class="mb-5 mt-4 fw-bold text-muted fs-5">Menu Item</h6>
 
-              <div class="row mb-2 align-items-center">
-                <div class="col-3 col-lg-2">
-                  <img src="../assets/images/burger.jpg" alt="burger" class="rounded-2 w-75"/>
+            <div class="row mb-2 align-items-center">
+              <div class="col-3 col-lg-2">
+                <img src="../assets/images/iced-caramel.png" alt="iced-caramel" class="rounded-2 w-75" />
+              </div>
+              <div class="col-9 col-lg-4">
+                <p class="mb-0 fw-semibold">Iced Caramel</p>
+                <p class="mb-0 fw-semibold text-secondary">Rp 12.000</p>
+              </div>
+              <div class="col-4 col-lg-2">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="fw-semibold">Jumlah</div>
+                  <div class="text-end">:</div>
+                  <div class="fw-semibold">2</div>
+
                 </div>
-                <div class="col-9 col-lg-4">
-                  <p class="mb-0 fw-semibold">Cheese Burger</p>
-                  <p class="mb-0 fw-semibold text-secondary">Rp 24.000</p>
-                </div>
-                <div class="col-4 col-lg-2">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="fw-semibold">Jumlah</div>
-                    <div class="text-end">:</div>
-                    <div class="fw-semibold">2</div>
-                    
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <p class="mb-0 text-dark fw-bold text-end">Rp 48.000</p>
-                </div>
-                
-            
+              </div>
+              <div class="col-6 col-lg-3">
+                <p class="mb-0 text-dark fw-bold text-end">Rp 24.000</p>
               </div>
 
-              <div class="row mb-2 align-items-center">
-                <div class="col-3 col-lg-2">
-                  <img src="../assets/images/iced-caramel.png" alt="iced-caramel" class="rounded-2 w-75"/>
-                </div>
-                <div class="col-9 col-lg-4">
-                  <p class="mb-0 fw-semibold">Iced Caramel</p>
-                  <p class="mb-0 fw-semibold text-secondary">Rp 12.000</p>
-                </div>
-                <div class="col-4 col-lg-2">
-                  <div class="d-flex align-items-center gap-2">
-                    <div class="fw-semibold">Jumlah</div>
-                    <div class="text-end">:</div>
-                    <div class="fw-semibold">2</div>
-                    
-                  </div>
-                </div>
-                <div class="col-6 col-lg-3">
-                  <p class="mb-0 text-dark fw-bold text-end">Rp 24.000</p>
-                </div>
-                
-            
-              </div>
 
-              <hr class="mt-4" style="border-style: dashed;">
+            </div>
+
+            <hr class="mt-4" style="border-style: dashed;">
           </div>
           <div class="payment-information mx-3 mb-4">
             <h6 class="mb-5 mt-2 fw-bold text-muted fs-5">Informasi Pembayaran</h6>
 
-          <div class="row mb-2">
-            <div class="col-5 fw-semibold">Subtotal Pesanan</div>
-            <div class="col-1 text-end">:</div>
-            <div class="col-6 fw-bold">Rp 72.000</div>
-          </div>
-          <div class="row mb-2">
-            <div class="col-5 fw-semibold">Pajak</div>
-            <div class="col-1 text-end">:</div>
-            <div class="col-6 fw-bold">Rp 2.500</div>
-          </div>
-          <div class="row mb-2">
-            <div class="col-5 fw-semibold">Total Pesanan</div>
-            <div class="col-1 text-end">:</div>
-            <div class="col-6 fw-bold">Rp 74.500</div>
-          </div>
+            <div class="row mb-2">
+              <div class="col-5 fw-semibold">Subtotal Pesanan</div>
+              <div class="col-1 text-end">:</div>
+              <div class="col-6 fw-bold">Rp 72.000</div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-5 fw-semibold">Pajak</div>
+              <div class="col-1 text-end">:</div>
+              <div class="col-6 fw-bold">Rp 2.500</div>
+            </div>
+            <div class="row mb-2">
+              <div class="col-5 fw-semibold">Total Pesanan</div>
+              <div class="col-1 text-end">:</div>
+              <div class="col-6 fw-bold">Rp 74.500</div>
+            </div>
 
-          <div class="row mb-2 mt-5">
-            <div class="col-5 fw-semibold">Jumlah Bayar</div>
-            <div class="col-1 text-end">:</div>
-            <div class="col-6 fw-bold">Rp 100.000</div>
-          </div>
+            <div class="row mb-2 mt-5">
+              <div class="col-5 fw-semibold">Jumlah Bayar</div>
+              <div class="col-1 text-end">:</div>
+              <div class="col-6 fw-bold">Rp 100.000</div>
+            </div>
 
-          <div class="row mb-2">
-            <div class="col-5 fw-semibold">Kembali</div>
-            <div class="col-1 text-end">:</div>
-            <div class="col-6 fw-bold">Rp 25.500</div>
-          </div>
+            <div class="row mb-2">
+              <div class="col-5 fw-semibold">Kembali</div>
+              <div class="col-1 text-end">:</div>
+              <div class="col-6 fw-bold">Rp 25.500</div>
+            </div>
 
-        
+
           </div>
         </div>
       </div>
@@ -221,5 +201,7 @@
     <script src="../assets/vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/order-list/show-order-list.js"></script>
     <script src="../assets/js/order-list/filter-order-status.js"></script>
-  </body>
+    <script src="../assets/js/responsive.js"></script>
+</body>
+
 </html>

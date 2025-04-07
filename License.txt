@@ -1,0 +1,21 @@
+Kasir App - Frontend UI Template
+Copyright © 2025 xrtvann
+
+LICENSE AGREEMENT
+
+By downloading or purchasing this template, you are granted a non-exclusive, non-transferable license to use the files under the following conditions:
+
+✅ YOU MAY:
+- Use this template for personal project or other projects.
+- Modify and customize the template to fit your needs.
+- Use this template for client work, freelance, or company projects.
+
+❌ YOU MAY NOT:
+- Resell, redistribute, sublicense, or share this template in its original or modified form.
+- Include this template in products or services intended for sale (e.g. CMS, template bundle) without written permission.
+
+This license is valid for a single user or organization. For extended license or partnership inquiries, contact: [muhammadirvan011206.com]
+
+Use of this template implies agreement with the above terms.
+
+Thank you for supporting indie developers. 🚀

@@ -59,7 +59,7 @@ function showOrderList() {
     }
 
     orderDiv.innerHTML = `
-       <div class="card mb-4 p-2 border-0">
+       <div class="card order mb-4 p-2 border-0">
               <div class="row g-0">
                 <div class="col-lg-12">
                   <div class="card-body">

@@ -369,4 +369,69 @@ a {
   .card-body {
     padding: 0rem;
   }
+
+  .card.order {
+    padding: 1rem 1.4rem !important;
+  }
+
+  .customer-information,
+  .payment-information {
+    font-size: 0.8rem;
+  }
+
+  .customer-information .row > div {
+    padding: 2px 0;
+  }
+
+  .customer-information h6
+  .payment-information h6 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .customer-information .customer-name,
+  .customer-information .customer-order {
+    padding: 0rem 0rem;
+  }
+
+  .customer-name,
+  .customer-order {
+    padding: 0rem 0.7rem !important;
+  }
+
+  .customer-name .col-xs-0,
+  .customer-order .col-xs-0 {
+    margin-right: 1rem !important;
+  }
+
+  .order-item h6 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .order-item .row {
+    margin-bottom: 2rem !important;
+  }
+
+  .order-item img {
+    width: 75% !important;
+  }
+
+  .order-item p {
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .order-item .col-3,
+  .order-item .col-4,
+  .order-item .col-6,
+  .order-item .col-9 {
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+
+  .quantity {
+    margin-left: 0.5rem !important;
+  }
+
 }

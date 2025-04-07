@@ -80,7 +80,7 @@ function showMenus() {
                     <img src="${menu.image}" alt="${
       menu.name
     }" class="w-75 d-block mx-auto"/>
-                    <h4 class="menu-name card-title mt-3 mb-2 h-100">${menu.name}</h4>
+                    <h4 class="menu-name card-title mt-3 mb-2 h-100 text-center">${menu.name}</h4>
                     <div class="menu-info d-flex justify-content-between w-100 gap-1">
                         <p class="menu-category mb-0 text-secondary fs-7">${menu.category}</p>
                         <p class="menu-price mb-0 text-primary fw-semibold">Rp ${menu.price.toLocaleString(

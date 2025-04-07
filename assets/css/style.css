@@ -383,8 +383,7 @@ a {
     padding: 2px 0;
   }
 
-  .customer-information h6
-  .payment-information h6 {
+  .customer-information h6 .payment-information h6 {
     font-size: 1rem;
     margin-bottom: 1.5rem !important;
   }
@@ -434,4 +433,44 @@ a {
     margin-left: 0.5rem !important;
   }
 
+  /* login */
+  .login-title h3 {
+    margin-top: 1.1rem !important;
+    font-size: 1.5rem;
+  }
+
+
+  .login-card {
+    padding: 0rem 2rem;
+  }
+
+  .login-card input::placeholder {
+    font-size: 0.9rem;
+  }
+
+  .dont-have-account {
+    text-align: center;
+  }
+  /* register */
+  .register-card {
+    padding: 0rem 2rem;
+  }
+
+  .register-card input::placeholder {
+    font-size: 0.9rem;
+  }
+
+  .register-card h3 {
+    margin-top: 1.1rem !important;
+    font-size: 1.5rem;
+  }
+
+  .register-text .slice-text {
+    display: block;
+    margin-top: 0.1rem;
+  }
+
+  .have-account {
+    text-align: center;
+  }
 }

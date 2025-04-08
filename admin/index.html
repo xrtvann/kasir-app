@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../assets/vendors/bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/vendors/boxicons-2.1.4/css/boxicons.min.css">
+</head>
+
+<body class="bg-soft-blue">
+
+    <div class="container-fluid d-flex flex-column">
+        <div class="row">
+            <div class="col-auto bg-white d-md-block sidebar shadow-sm px-2 pt-2 z-1" id="sidebar">
+                <a href="." class="d-flex align-items-center ps-3 pt-2 mb-5 sidebar-logo">
+                    <img src="../assets/images/logo.png" alt="logo">
+                    <span class="fs-3 fw-semibold ms-4 pt-2 sidebar-text">Kasir app</span>
+                </a>
+
+                <ul class="nav nav-pills flex-column gap-3">
+                    <li class="nav-item px-1">
+                        <a class="nav-link active" href="#">
+                            <span class="d-flex align-items-center p-1">
+                                <i class="bx bx-home me-3"></i> <span class="sidebar-text">Home</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="#">
+                            <span class="d-flex align-items-center p-1">
+                                <i class="bx bxs-dashboard me-3"></i><span class="sidebar-text">Dashboard</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="#">
+                            <span class="d-flex align-items-center p-1">
+                                <i class="bx bx-dish me-3"></i> <span class="sidebar-text">Product</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="#">
+                            <span class="d-flex align-items-center p-1">
+                                <i class="bx bx-food-menu me-3"></i> <span class="sidebar-text">Order</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item px-1">
+                        <a class="nav-link" href="#">
+                            <span class="d-flex align-items-center p-1">
+                                <i class="bx bx-user-circle me-3"></i> <span class="sidebar-text">User</span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+            <div class="col main-content position-relative p-0 shadow-sm">
+                <nav class="navbar navbar-light bg-white px-3 py-2">
+                    <div class="toogle-button">
+                        <button id="sidebarToggle" class="btn border-0 p-0">
+                            <i class="bx bx-menu fs-1"></i>
+                        </button>
+                    </div>
+
+                    <div class="position-relative w-50">
+                        <form action="" role="search">
+                            <input type="text" class="form-control ps-5" placeholder="Search...">
+                            <i
+                                class="fs-5 bx bx-search position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"></i>
+                        </form>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+
+                        <button class="btn border-0 position-relative me-3">
+                            <i class="bx bx-bell fs-4"></i>
+                        </button>
+
+
+                        <div class="dropdown">
+                            <a href="#" class="d-flex align-items-center text-decoration-none text-dark"
+                                data-bs-toggle="dropdown">
+                                <i class="bx bx-user fs-4"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

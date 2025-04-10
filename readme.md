@@ -8,9 +8,11 @@ Kasir App adalah aplikasi berbasis web yang dirancang untuk membantu proses tran
 - **Simulasi Transaksi**: UI untuk menambahkan produk ke dalam keranjang belanja.
 - **Desain Responsif**: Dapat digunakan di berbagai perangkat.
 
+- **Admin Dashboard (under development🛠️)**: Admin dashboard ini merupakan pusat kontrol utama untuk mengelola data dan fitur dalam aplikasi Kasir App
+
 ## 🛠️ Teknologi yang Digunakan
 - **Frontend**: HTML, CSS, JavaScript
-- **Framework & Libraries**: Bootstrap
+- **Framework & Libraries**: Bootstrap, Chart JS, SweetAlert2
 - **Icons**: Box Icons, Flat Icons
 
 ## 📥 Instalasi

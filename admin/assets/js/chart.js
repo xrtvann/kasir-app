@@ -1,12 +1,14 @@
 const ctx = document.getElementById('incomeChart').getContext('2d');
+Chart.defaults.font.family = "'Poppins', sans-serif"; 
+Chart.defaults.font.weight = 500; 
 const incomeChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: ['Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab', 'Min'],
     datasets: [{
       label: 'Rp',
-      data: [500000, 700000, 450000, 600000, 800000, 400000, 900000],
-      backgroundColor: 'rgba(54, 162, 235, 0.7)',
+      data: [400000, 500000, 700000, 450000, 600000, 800000, 900000],
+      backgroundColor: 'rgba(11, 180, 62, 0.7)',
       borderRadius: 6,
       borderSkipped: false
     }]

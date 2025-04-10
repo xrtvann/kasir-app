@@ -95,25 +95,29 @@
                                             <div class="row">
                                                 <div class="col-lg-6 mb-3">
                                                     <div class="input-group">
-                                                        <input type="text" placeholder="Nama Menu" class="form-control" required>
+                                                        <input type="text" placeholder="Nama Menu" class="form-control"
+                                                            required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 mb-3">
-                                                    <select class="form-select" aria-label="Default select example" required>
+                                                    <select class="form-select" aria-label="Default select example"
+                                                        required>
                                                         <option selected>Pilih kategori</option>
                                                         <option value="makanan">Makanan</option>
                                                         <option value="minuman">Minuman</option>
                                                         <option value="snack">Snack</option>
-                                                      </select>
+                                                    </select>
                                                 </div>
                                                 <div class="col-lg-6 mb-3">
                                                     <div class="input-group">
-                                                        <input type="text" placeholder="Harga" inputmode="numeric" class="form-control" required>
+                                                        <input type="text" placeholder="Harga" inputmode="numeric"
+                                                            class="form-control" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-6 mb-3">
                                                     <div class="input-group">
-                                                        <input type="file" placeholder="Harga" class="form-control" required>
+                                                        <input type="file" placeholder="Harga" class="form-control"
+                                                            required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -157,9 +161,65 @@
                                         <td>Makanan</td>
                                         <td>
                                             <div class="action-button d-flex gap-3">
-                                                <a href="#" class="fs-4 text-warning"><i class='bx bx-edit'></i></a>
+                                                <a type="button" data-bs-toggle="modal" data-bs-target="#editMenuModal" class="fs-4 text-warning"><i
+                                                        class='bx bx-edit'></i></a>
                                                 <a href="#" class="fs-4 text-danger delete-button"><i
                                                         class='bx bx-trash'></i></a>
+                                            </div>
+                                            <div class="modal fade modal-lg" id="editMenuModal" data-bs-backdrop="static"
+                                                data-bs-keyboard="false" tabindex="-1"
+                                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Edit Menu</h1>
+                                                            <button type="button" class="btn-close"
+                                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form action="">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6 mb-3">
+                                                                        <div class="input-group">
+                                                                            <input type="text" placeholder="Nama Menu"
+                                                                                class="form-control" required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 mb-3">
+                                                                        <select class="form-select"
+                                                                            aria-label="Default select example"
+                                                                            required>
+                                                                            <option selected>Pilih kategori</option>
+                                                                            <option value="makanan">Makanan</option>
+                                                                            <option value="minuman">Minuman</option>
+                                                                            <option value="snack">Snack</option>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="col-lg-6 mb-3">
+                                                                        <div class="input-group">
+                                                                            <input type="text" placeholder="Harga"
+                                                                                inputmode="numeric" class="form-control"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-6 mb-3">
+                                                                        <div class="input-group">
+                                                                            <input type="file" placeholder="Harga"
+                                                                                class="form-control" required>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button"
+                                                                class="btn btn-primary">Simpan</button>
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-bs-dismiss="modal">Cancel</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </td>
                                     </tr>

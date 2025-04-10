@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../../assets/vendors/bootstrap-5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/vendors/boxicons-2.1.4/css/boxicons.min.css">
+</head>
+
+<body class="bg-soft-blue">
+
+    <div class="d-flex" id="wrapper">
+        <nav id="sidebar" class="sidebar position-fixed bg-white shadow-sm px-2">
+            <div class="sidebar-header d-flex align-items-center py-3">
+                <img src="../../assets/images/logo.png" alt="logo">
+                <h4 class="ms-4 mt-3 fw-semibold text-primary">Kasir app</h4>
+            </div>
+            <ul class="nav-pills px-2 mt-3 fs-4 list-unstyled">
+                <li class="mb-2">
+                    <a href="../index.html" class="nav-link px-3 py-2 d-flex align-items-center">
+                        <i class="bx bx-home me-2"></i>
+                        <span class="sidebar-text fs-6 fw-semibold">Home</span>
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="dashboard.html" class="nav-link px-3 py-2 d-flex align-items-center">
+                        <i class="bx bxs-dashboard me-2"></i>
+                        <span class="sidebar-text fs-6 fw-semibold">Dashboard</span>
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="menu.html" class="nav-link active px-3 py-2 d-flex align-items-center">
+                        <i class="bx bx-dish me-2"></i>
+                        <span class="sidebar-text fs-6 fw-semibold">Menu</span>
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="order.html" class="nav-link px-3 py-2 d-flex align-items-center">
+                        <i class="bx bx-food-menu me-2"></i>
+                        <span class="sidebar-text fs-6 fw-semibold">Order</span>
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="user.html" class="nav-link px-3 py-2 d-flex align-items-center">
+                        <i class="bx bx-user-circle me-2"></i>
+                        <span class="sidebar-text fs-6 fw-semibold">User</span>
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+
+        <div id="main-content" class="main-content flex-grow-1">
+            <nav class="navbar navbar-light bg-light px-4 py-3 shadow-sm position-fixed main-navbar">
+                <div class="collapsed-button">
+                    <i class="bx bx-menu fs-2 cursor-pointer" id="toggleSidebar"></i>
+                </div>
+                <div class="search-box">
+                    <form role="search" class="position-relative">
+                        <i class="bx bx-search search-icon"></i>
+                        <input type="text" class="form-control py-2" placeholder="Search">
+                    </form>
+                </div>
+                <div class="navbar-icon">
+                    <a href="#" class="text-dark me-2"><i class="bx bx-bell fs-5"></i></a>
+                    <a href="#" class="text-dark"><i class="bx bx-user fs-5"></i></a>
+                </div>
+
+            </nav>
+
+            <div class="container-fluid p-4">
+                <div class="menu mt-3 mb-5 d-flex justify-content-between align-items-center">
+                    <div class="list-menu-text rounded-3">
+                        <h3>Daftar Menu</h3>
+                    </div>
+                    <div class="add-menu-button">
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                            data-bs-target="#menuModal"><i class="bx bx-plus fs-4"></i>Tambah Menu</button>
+                        <div class="modal fade modal-lg" id="menuModal" data-bs-backdrop="static"
+                            data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Menu Baru</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="row">
+                                                <div class="col-lg-6 mb-3">
+                                                    <div class="input-group">
+                                                        <input type="text" placeholder="Nama Menu" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 mb-3">
+                                                    <select class="form-select" aria-label="Default select example" required>
+                                                        <option selected>Pilih kategori</option>
+                                                        <option value="makanan">Makanan</option>
+                                                        <option value="minuman">Minuman</option>
+                                                        <option value="snack">Snack</option>
+                                                      </select>
+                                                </div>
+                                                <div class="col-lg-6 mb-3">
+                                                    <div class="input-group">
+                                                        <input type="text" placeholder="Harga" inputmode="numeric" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 mb-3">
+                                                    <div class="input-group">
+                                                        <input type="file" placeholder="Harga" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Simpan</button>
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle">
+                                <caption>List of Menu</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="fw-semibold">No</th>
+                                        <th scope="col" class="fw-semibold">Gambar</th>
+                                        <th scope="col" class="fw-semibold">Nama</th>
+                                        <th scope="col" class="fw-semibold">Harga</th>
+                                        <th scope="col" class="fw-semibold">Kategori</th>
+                                        <th scope="col" class="fw-semibold">Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td><img src="../../assets/images/fried-rice.png" class="img-thumbnail"
+                                                style="width: 60px; height: 60px; object-fit: cover;"></td>
+                                        <td>Nasi Goreng</td>
+                                        <td>Rp 20.000</td>
+                                        <td>Makanan</td>
+                                        <td>
+                                            <div class="action-button d-flex gap-3">
+                                                <a href="#" class="fs-4 text-warning"><i class='bx bx-edit'></i></a>
+                                                <a href="#" class="fs-4 text-danger delete-button"><i
+                                                        class='bx bx-trash'></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link">Previous</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../assets/vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/menu.js"></script>
+</body>
+
+</html>

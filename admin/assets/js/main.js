@@ -18,3 +18,5 @@ const today = new Date().toLocaleDateString('id-ID', {
 });
 
 calendar.innerText = today;
+
+

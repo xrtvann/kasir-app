@@ -91,12 +91,12 @@
             <div class="container-fluid p-4">
                 <ul class="nav nav-pills gap-2" id="menuTab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" id="listMenuTab" data-bs-target="#list-menu" data-bs-toggle="pill"
+                        <a class="nav-link" id="listMenuTab" data-bs-target="#list-menu" data-bs-toggle="pill"
                             aria-current="page" role="tab" href="#">Daftar menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" role="tab" id="categoryTab" data-bs-target="#category"
-                            data-bs-toggle="pill" href=" #">Kategori</a>
+                        <a class="nav-link" role="tab" id="categoryTab" data-bs-target="#category" data-bs-toggle="pill"
+                            href=" #">Kategori</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" role="tab" id="stockTab" data-bs-target="#stock" data-bs-toggle="pill"
@@ -106,7 +106,7 @@
                 </ul>
                 <hr>
                 <div class="tab-content" id="menuTabContent">
-                    <div class="tab-pane fade show active" id="list-menu">
+                    <div class="tab-pane fade" id="list-menu">
                         <div class="menu mt-3 mb-5 d-flex justify-content-between align-items-center">
                             <div class="list-menu-text rounded-3">
                                 <h3>Daftar Menu</h3>
@@ -253,6 +253,135 @@
                                                                                         class="form-control" required>
                                                                                 </div>
                                                                             </div>
+                                                                        </div>
+                                                                    </form>
+
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button"
+                                                                        class="btn btn-primary">Simpan</button>
+                                                                    <button type="button" class="btn btn-secondary"
+                                                                        data-bs-dismiss="modal">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+                                            <a class="page-link">Previous</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="category">
+                        <div class="menu mt-3 mb-5 d-flex justify-content-between align-items-center">
+                            <div class="list-menu-text rounded-3">
+                                <h3>Daftar Kategori</h3>
+                            </div>
+                            <div class="add-menu-button">
+                                <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                                    data-bs-target="#categoryModal"><i class="bx bx-plus fs-4"></i>Tambah
+                                    Kategori</button>
+                                <div class="modal fade modal-lg" id="categoryModal" data-bs-backdrop="static"
+                                    data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="staticBackdropLabel">Tambah Kategori
+                                                    Baru
+                                                </h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form action="">
+                                                    <div class="row">
+                                                        <div class="col-lg-12 mb-3">
+                                                            <div class="input-group">
+                                                                <input type="text" placeholder="Nama Kategori"
+                                                                    class="form-control" required>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">Simpan</button>
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle">
+                                        <caption>List of Category</caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="fw-semibold">No</th>
+                                                <th scope="col" class="fw-semibold">Kategori</th>
+                                                <th scope="col" class="fw-semibold">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                               
+                                                <td>Makanan</td>
+                                                <td>
+                                                    <div class="action-button d-flex gap-3">
+                                                        <a type="button" data-bs-toggle="modal"
+                                                            data-bs-target="#editCategoryModal"
+                                                            class="fs-4 text-warning"><i class='bx bx-edit'></i></a>
+                                                        <a href="#" class="fs-4 text-danger delete-button"><i
+                                                                class='bx bx-trash'></i></a>
+                                                    </div>
+                                                    <div class="modal fade modal-lg" id="editCategoryModal"
+                                                        data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                                        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                                        <div class="modal-dialog">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h1 class="modal-title fs-5"
+                                                                        id="staticBackdropLabel">
+                                                                        Edit
+                                                                        Kategori</h1>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <form action="">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-12 mb-3">
+                                                                                <div class="input-group">
+                                                                                    <input type="text"
+                                                                                        placeholder="Nama Kategori"
+                                                                                        class="form-control" required>
+                                                                                </div>
+                                                                            </div>
+
                                                                         </div>
                                                                     </form>
 

@@ -30,3 +30,24 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
 });
+
+document.querySelectorAll('#menuTab a[data-bs-toggle="pill"]').forEach((tab) => {
+  tab.addEventListener('shown.bs.tab', function (e) {
+    localStorage.setItem('activeMenuTab', e.target.getAttribute('data-bs-target'));
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const lastTab = localStorage.getItem('activeMenuTab');
+  if (lastTab) {
+    const tabTrigger = document.querySelector(`#menuTab a[data-bs-target="${lastTab}"]`);
+    if (tabTrigger) {
+      new bootstrap.Tab(tabTrigger).show();
+    } else {
+      const firstTab = document.querySelector('#menuTab a[data-bs-toggle="pill"]');
+      if (firstTab) {
+      new bootstrap.Tab(firstTab).show();
+    }
+    }
+  }
+});

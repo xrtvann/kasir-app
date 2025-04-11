@@ -65,9 +65,22 @@
                         <input type="text" class="form-control py-2" placeholder="Search">
                     </form>
                 </div>
-                <div class="navbar-icon">
+                <div class="navbar-icon d-flex">
                     <a href="#" class="text-dark me-2"><i class="bx bx-bell fs-5"></i></a>
-                    <a href="#" class="text-dark"><i class="bx bx-user fs-5"></i></a>
+                    <div class="dropdown">
+                        <a href="#" class="text-dark" data-bs-toggle="dropdown"><i class="bx bx-user fs-5"></i></a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="bx bx-user-circle pe-2 fs-5"></i>Profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="bx bx-cog pe-2 fs-5"></i>Setting</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="bx bx-log-out pe-2 fs-5"></i>Log out</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
             </nav>
@@ -142,21 +155,21 @@
                         <div class="card p-4 border-0 shadow-sm mb-4">
                             <h5 class="fw-semibold mb-3 text-center">Grafik Pendapatan (Minggu)</h5>
                             <canvas id="incomeChart"></canvas>
-                          </div>
+                        </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="card border-0">
                             <div class="card-body">
-                              <h6 class="fw-semibold">Target Mingguan</h6>
-                              <div class="progress mb-1" style="height: 8px;">
-                                <div class="progress-bar bg-primary" style="width: 76%;"></div>
-                              </div>
-                              <small>Rp 5.200.000 dari Rp 7.000.000</small>
+                                <h6 class="fw-semibold">Target Mingguan</h6>
+                                <div class="progress mb-1" style="height: 8px;">
+                                    <div class="progress-bar bg-primary" style="width: 76%;"></div>
+                                </div>
+                                <small>Rp 5.200.000 dari Rp 7.000.000</small>
                             </div>
-                          </div>
-                          
-                       
-                          
+                        </div>
+
+
+
                     </div>
                 </div>
             </div>

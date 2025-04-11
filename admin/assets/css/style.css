@@ -50,6 +50,9 @@
   margin-left: 90px;
 }
 
+.notransition {
+  transition: none !important;
+}
 
 .search-box {
   width: 400px;

@@ -71,13 +71,16 @@
                         <a href="#" class="text-dark" data-bs-toggle="dropdown"><i class="bx bx-user fs-5"></i></a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="bx bx-user-circle pe-2 fs-5"></i>Profile</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i
+                                        class="bx bx-user-circle pe-2 fs-5"></i>Profile</a>
                             </li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="bx bx-cog pe-2 fs-5"></i>Setting</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i
+                                        class="bx bx-cog pe-2 fs-5"></i>Setting</a>
                             </li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="bx bx-log-out pe-2 fs-5"></i>Log out</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i
+                                        class="bx bx-log-out pe-2 fs-5"></i>Log out</a>
                             </li>
                         </ul>
                     </div>
@@ -86,9 +89,95 @@
             </nav>
 
             <div class="container-fluid p-4">
+                <ul class="nav nav-pills gap-2" id="menuTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link" id="listMenuTab" data-bs-target="#list-menu" data-bs-toggle="pill"
+                            aria-current="page" role="tab" href="#">Daftar Order</a>
+                    </li>
 
 
+                </ul>
+                <hr>
+                <div class="tab-content" id="menuTabContent">
+                    <div class="tab-pane fade" id="list-menu">
+                        <div class="menu mt-3 mb-5 d-flex justify-content-between align-items-center">
+                            <div class="list-menu-text rounded-3">
+                                <h3>Daftar Order</h3>
+                            </div>
 
+                        </div>
+
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle">
+                                        <caption>List of Orders</caption>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="fw-semibold">No Order</th>
+                                                <th scope="col" class="fw-semibold">Tanggal & Waktu</th>
+                                                <th scope="col" class="fw-semibold">Total Pembelian</th>
+                                                <th scope="col" class="fw-semibold">Status Order</th>
+                                                <th scope="col" class="fw-semibold">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Order #001</td>
+                                                <td>14-04-2025 / 14.00 WIB</td>
+                                                <td>Rp 120.000</td>
+                                                <td class="text-success fw-semibold">Selesai</td>
+                                                <td>
+                                                    <div class="action-button d-flex gap-3">
+                                                        <a href="#" class="fs-4 text-danger delete-button"><i
+                                                                class='bx bx-trash'></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Order #002</td>
+                                                <td>14-04-2025 / 15.00 WIB</td>
+                                                <td>Rp 190.000</td>
+                                                <td class="text-danger fw-semibold">Cancel</td>
+                                                <td>
+                                                    <div class="action-button d-flex gap-3">
+                                                        <a href="#" class="fs-4 text-danger delete-button"><i
+                                                                class='bx bx-trash'></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Order #003</td>
+                                                <td>14-04-2025 / 17.00 WIB</td>
+                                                <td>Rp 145.000</td>
+                                                <td class="text-secondary fw-semibold">Pending</td>
+                                                <td>
+                                                    <div class="action-button d-flex gap-3">
+                                                        <a href="#" class="fs-4 text-danger delete-button"><i
+                                                                class='bx bx-trash'></i></a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item disabled">
+                                            <a class="page-link">Previous</a>
+                                        </li>
+                                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

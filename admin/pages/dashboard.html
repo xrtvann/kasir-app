@@ -71,13 +71,16 @@
                         <a href="#" class="text-dark" data-bs-toggle="dropdown"><i class="bx bx-user fs-5"></i></a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="bx bx-user-circle pe-2 fs-5"></i>Profile</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i
+                                        class="bx bx-user-circle pe-2 fs-5"></i>Profile</a>
                             </li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="bx bx-cog pe-2 fs-5"></i>Setting</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i
+                                        class="bx bx-cog pe-2 fs-5"></i>Setting</a>
                             </li>
                             <li>
-                                <a class="dropdown-item d-flex align-items-center" href="#"><i class="bx bx-log-out pe-2 fs-5"></i>Log out</a>
+                                <a class="dropdown-item d-flex align-items-center" href="#"><i
+                                        class="bx bx-log-out pe-2 fs-5"></i>Log out</a>
                             </li>
                         </ul>
                     </div>
@@ -87,15 +90,37 @@
 
             <div class="container-fluid p-4">
 
+                <div class="row mt-5">
+                    <div class="col-lg-8">
+                        <div class="card p-4 border-0 shadow-sm mb-4">
+                            <h5 class="fw-semibold mb-3 text-center">Grafik Pendapatan (Bulanan)</h5>
+                            <canvas id="incomeMonthlyChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <h6 class="fw-semibold">Target Bulanan</h6>
+                                <div class="progress mb-1" style="height: 8px;">
+                                    <div class="progress-bar bg-primary" style="width: 26%;"></div>
+                                </div>
+                                <small>Rp 5.200.000 dari Rp 20.000.000</small>
+                            </div>
+                        </div>
 
+
+
+                    </div>
+                </div>
 
             </div>
         </div>
     </div>
 
 
-
     <script src="../../assets/vendors/bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../assets/js/chart.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 
